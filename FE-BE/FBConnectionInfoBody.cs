@@ -1,12 +1,8 @@
-﻿using System.Runtime.InteropServices;
-
-namespace ChatServer
+ using System.Runtime.InteropServices;
+ struct FBConnectionInfoBody
 {
-    struct FBConnectionInfo
-    {
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 15)]
-        public char[] ip;
-        public int port;
-        Protocol protocol;
-    }
+    [MarshalAs(UnmanagedType.ByValArray, SizeConst = 15)]
+    public char[] ip;
+    public int port;
+    public Protocol protocol;
 }
