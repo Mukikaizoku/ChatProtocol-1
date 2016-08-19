@@ -1,37 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+// containing single rank information
+// will be used as struct array to provide Ranking information
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
-
-
 public struct CBRanking
 {
     [MarshalAs(UnmanagedType.ByValArray, SizeConst = 12)]
-    char[] id;
-
-    int rank;
-
-    int score;
-
-    public char[] Id
-    {
-        get { return this.id; }
-        set { this.id = value; }
-    }
-
-    public int Rank
-    {
-        get { return this.rank; }
-        set { this.rank = value; }
-    }
-
-
-    public int Score
-    {
-        get { return this.score;  }
-        set { this.score = value; }
-    }
-
+    public char[] id; // user id
+    public int rank; // user's rnak 
+    public int score; // user's score
 }

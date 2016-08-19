@@ -1,6 +1,11 @@
  using System.Runtime.InteropServices;
- struct CFRoomRequestBody
+
+
+namespace ChatServer
 {
-    [MarshalAs(UnmanagedType.ByValArray, SizeConst = 12)] char[] id;
-    int roomNo; 
+    struct CFRoomRequestBody
+    {
+        public int roomNo;          // 0 = Lobby
+        //public int cookie;        //If 0, server knows it's not a connection pass request?
+    }
 }

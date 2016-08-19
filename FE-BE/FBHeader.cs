@@ -7,31 +7,29 @@ public struct FBHeader
     public FBMessageState state;
     public int length;
     public int sessionId;
-
-    public int Length
-    {
-        get { return this.length; }
-        set { this.length = value; }
-    }
-
-    public FBMessageType Type
-    {
-        get { return this.type; }
-        set { this.type = value; }
-    }
-
-    public FBMessageState State
-    {
-        get { return this.state; }
-        set { this.state = value; }
-    }
-
-    public int SessionId
-    {
-        get { return this.sessionId; }
-        set { this.sessionId = value; }
-    }
 }
+
+public enum FBMessageType : short
+{
+    Id_Dup = 110,               //Depreciated
+    Signup = 120,               //Depreciated
+
+    Login = 210,                //Depreciated
+    Logout = 220,               //Depreciated
+
+    Room_Create = 310,          //Request to create a room in the DB
+    Room_Leave = 320,           //Request to remove a user from a room in the DB
+    Room_Join = 330,            //Request to add a user from a room in the DB
+    Room_List = 340,            //Request to the current list of rooms in the DB
+    Room_Delete = 350,          //Request to delete a room in the DB
+
+    Chat_Count = 410,           //Send a request to update the chat message count for a particular user
+
+    Health_Check = 510,
+    Cookie_Run = 520,
+
+    Connection_Info = 610
+};
 
 public enum Protocol
 {
@@ -39,30 +37,11 @@ public enum Protocol
     Web
 }
 
-public enum FBMessageType : short
-{
-    Id_Dup = 110,
-    Signup = 120,
-
-    Login = 210,
-    Logout = 220,
-
-    Room_Create = 310,
-    Room_Leave = 320,
-    Room_Join = 330,
-    Room_List = 340,
-    Room_Delete = 350,
-
-    Chat_Count = 410,
-
-    Health_Check = 510,
-
-    Connection_Info = 610
-};
-
 public enum FBMessageState : short
 {
-    REQUEST = 100,
-    SUCCESS = 200,
-    FAIL = 400
+    Request = 100,
+    Success = 200,
+    Fail = 400
 }
+
+

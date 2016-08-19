@@ -1,13 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-
-struct FBSignupResponseBody
+﻿public struct FBSignupResponseBody
 {
-   
     // none
     // using header.status
 

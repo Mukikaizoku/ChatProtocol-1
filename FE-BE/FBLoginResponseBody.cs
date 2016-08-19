@@ -1,16 +1,13 @@
+
 using System.Runtime.InteropServices;
 
-struct FBLoginResponseBody{
-    // none
-    // using Header.Status
+public struct FBLoginResponseBody
+{
     [MarshalAs(UnmanagedType.ByValArray, SizeConst = 12)]
     public char[] id;
-
-    public char[] Id
-    {
-        get { return this.id; }
-        set { this.id = value; }
-    }
-
-
+    [MarshalAs(UnmanagedType.ByValArray, SizeConst = 15)]
+    public char[] ip;
+    public int port;
+    public Protocol protocolType;
+    public int cookie;
 }
