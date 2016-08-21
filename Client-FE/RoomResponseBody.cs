@@ -1,8 +1,8 @@
+﻿
 
-
-namespace ChatServer
+namespace Client
 {
-    struct CFRoomResponseBody
+    struct RoomResponseBody
     {
         byte[] data;
         // data -> roomNo, IP, Port, timeStamp, chatRoom List 

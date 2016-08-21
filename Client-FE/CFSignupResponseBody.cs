@@ -1,3 +1,0 @@
-struct CFSignupResponseBody{
-  // none 
-}

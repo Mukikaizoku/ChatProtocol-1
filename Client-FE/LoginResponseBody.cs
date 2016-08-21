@@ -1,7 +1,8 @@
-using System.Runtime.InteropServices;
-namespace ChatServer
+﻿using System.Runtime.InteropServices;
+
+namespace Client
 {
-    struct CFLoginResponseBody
+    struct LoginResponseBody
     {
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 15)]
         public char[] ip;
