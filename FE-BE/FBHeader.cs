@@ -13,6 +13,8 @@ public enum FBMessageType : short
 {
     Id_Dup = 110,               //Depreciated
     Signup = 120,               //Depreciated
+    ChangePassword = 130,
+    DeleteId = 140,
 
     Login = 210,                //Depreciated
     Logout = 220,               //Depreciated
