@@ -11,6 +11,7 @@ namespace LunkerRedis.src.Frame.FE_BE
         private string name;
         private string ip;
         private int port;
+        private short type;
 
 
         public FEInfo() { }
@@ -38,6 +39,11 @@ namespace LunkerRedis.src.Frame.FE_BE
         {
             get { return this.port; }
             set { this.port = value; }
+        }
+        public short Type
+        {
+            get { return this.type; }
+            set { this.type = value; }
         }
     }
 }

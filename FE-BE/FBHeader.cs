@@ -31,10 +31,10 @@ public enum FBMessageType : short
     Connection_Info = 610
 };
 
-public enum Protocol
+enum Protocol : short
 {
-    Tcp = 0,
-    Web
+    Tcp = 1,
+    Web = 3
 }
 
 public enum FBMessageState : short

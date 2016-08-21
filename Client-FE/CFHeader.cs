@@ -9,14 +9,7 @@ namespace ChatServer
         public CFMessageState state;
         public int length;
     }
-
-
-    enum Protocol
-    {
-        Tcp = 0,
-        Web
-    }
-
+    
     enum CFMessageType : short
     {
         Id_Dup = 110,                   //Reserve for a later implementation of an incorrect-server login attempt and subsequent pass to login server
