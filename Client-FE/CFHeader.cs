@@ -8,7 +8,6 @@ namespace Client
         public MessageType type;
         public MessageState state;
         public int length;
-<<<<<<< HEAD
 
         public CFHeader(MessageType type, MessageState state, int length)
         {
@@ -24,13 +23,8 @@ namespace Client
         Tcp = 1,
         Web = 3
     }
-
-    public enum MessageType : short
-=======
-    }
     
     enum CFMessageType : short
->>>>>>> 22edaf8477a235f46a8a5b3cb7aa2772d429e830
     {
         Id_Dup = 110,
         Signup = 120,
